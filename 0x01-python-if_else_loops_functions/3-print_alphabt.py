@@ -1,4 +1,4 @@
-""" #!/usr/bin/python3 """
-for i in range(97, 123):
-    if i != 113 and i != 101:
-        print("{:c}".format(i), end='')
+#!/usr/bin/python3
+for a in range(ord('a'), ord('z') + 1):
+    if chr(a) != 'e' and chr(a) != 'q':
+        print("{:c}".format(a), end='')
