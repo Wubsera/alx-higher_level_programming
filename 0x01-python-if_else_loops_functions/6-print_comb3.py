@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-for i in range(0, 8):
-    for j in range(i, 10):
-        if i != j:
-            print("{:d}{:d}, ".format(i, j), end='')
-                                    print("89")
+for i in range(10):
+    for j in range(i + 1, 10):
+        print(
+                "{}{}".format(i, j),
+                end=", " if int(str(i) + str(j)) < 89 else "\n"
+                )
