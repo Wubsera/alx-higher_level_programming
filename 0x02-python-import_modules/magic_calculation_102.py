@@ -1,10 +1,52 @@
 #!/usr/bin/python3
-def magic_calculation(a, b):
-    from magic_calculation_102 import add, sub
-            if a < b:
-                c = add(a, b)
-                                for i in range(4, 6):
-                                    c = add(c, i)
-                                                        return c
-                                                    else:
-                                                        return sub(a, b)
+
+def add(a, b):
+    """My addition function
+
+            Args:
+                    a: first integer
+                            b: second integer
+
+                                Returns:
+                                        The return value. a + b
+                                            """
+                                                return (a + b)
+
+
+                                            def sub(a, b):
+                                                """My subtraction function
+
+                                                        Args:
+                                                                a: first integer
+                                                                        b: second integer
+
+                                                                            Returns:
+                                                                                    The return value. a - b
+                                                                                        """
+                                                                                            return (a - b)
+
+
+                                                                                        def mul(a, b):
+                                                                                            """My multiplication function
+
+                                                                                                    Args:
+                                                                                                            a: first integer
+                                                                                                                    b: second integer
+
+                                                                                                                        Returns:
+                                                                                                                                The return value. a * b
+                                                                                                                                    """
+                                                                                                                                        return (a * b)
+
+
+                                                                                                                                    def div(a, b):
+                                                                                                                                        """My division function
+
+                                                                                                                                                Args:
+                                                                                                                                                        a: first integer
+                                                                                                                                                                b: second integer
+
+                                                                                                                                                                    Returns:
+                                                                                                                                                                            The return value. a / b
+                                                                                                                                                                                """
+                                                                                                                                                                                    return int(a / b)
