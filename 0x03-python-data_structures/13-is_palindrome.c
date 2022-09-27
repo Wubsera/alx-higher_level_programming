@@ -1,21 +1,61 @@
 #include "lists.h"
 
+listint_t *reverse_listint(listint_t **head);
+
 /**
- *  * is_palindrome - check if a linked list is a palindrome
- *   * @head: pointer to head of list
- *    * Return: 0 or 1
- *     */
+ *  * is_palindrome - Write a function in C that checks if a singly linked
+ *   *                 list is a palindrome.
+ *    *
+ *     * @head: This is the input single linked list
+ *      *
+ *       * Return: Return: 0 if it is not a palindrome, 1 if it is a palindrome
+ *        *                 An empty list is considered a palindrome
+ *         *
+ */ 
+
 int is_palindrome(listint_t **head)
 {
-	const listint_t *current;
-	const listint_t *tail;
-	unsigned int n = 0;
+	listint_t *aux = *head, *current = *head;
 
-	//Get length
-	//    //Use a function to get a node on a specific index
-	//        //check the first to the last and, second to second last ....
-	//            //return false if one check was False
-	//                //return true at the end (if all passed the checks)
-	//
-	//                    return (n);
-	//                    }
+	if (*head == NULL)
+		return (1);
+	if ((*head)->next == NULL)
+		return (1);
+	while (current != NULL && aux != NULL && aux->next != NULL)
+	{
+		current = current->next;
+		aux = aux->next->next;
+	}
+	current = reverse_listint(&current);
+	aux = *head;
+	while (aux != NULL && current != NULL)
+	{
+		if (aux->n != current->n)
+			return (0);
+		aux = aux->next;
+		current = current->next;
+	}
+	return (1);
+}
+/**
+ *  * reverse_listint - Function that reverses a listint_t linked list
+ *   *
+ *    * @head: This is the input single linked list
+ *     *
+ *      * Return: Pointer to the first node of the reversed list
+ */
+
+listint_t *reverse_listint(listint_t **head)
+{
+	listint_t *next = *head, *current = NULL;
+
+	while (*head != NULL)
+	{
+		next = (*head)->next;
+		(*head)->next = current;
+		current = *head;
+		*head = next;
+	}
+	*head = current;
+	return (*head);
+}
