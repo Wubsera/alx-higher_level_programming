@@ -1,9 +1,8 @@
-This is a doctest for the``5-text_indentation`` module
-==============================================================================================
+The ``5-text_indentation`` module
+============================
 
 Using ``text_indentation``
-It is supposed to print a text with 2 new lines after each of these characters: '.', '?', ':'
-______________________________________________________________________________________________
+---------------------
 
 Import module:
     >>> text_indentation = __import__('5-text_indentation').text_indentation

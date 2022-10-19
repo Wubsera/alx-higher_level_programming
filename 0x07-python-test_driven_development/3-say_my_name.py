@@ -6,11 +6,11 @@ def say_my_name(first_name, last_name=""):
     """Method for printing first and last name.
 
     Args:
-        first_name: first name str.
-        last_name: last name str.
+        first_name: first name string.
+        last_name: last name string.
 
     Raises:
-        TypeError: if none of the names are strings.
+        TypeError: If first_name or last_name are not strings.
     """
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")

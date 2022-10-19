@@ -1,14 +1,12 @@
-This is a doctest for 3-say_my_name module.
-+__________________________________________________________________________________+
+The ``3-say_my_name`` module
+============================
 
-Using ``3-say_my_name``.
-It is supposed to print a first and last name.
-____________________________________________________________________________________
+Using ``3-say_my_name``
+---------------------
 
-Import Module:
-	>>> say_my_name = __import__('3-say_my_name').say_my_name
+Import module:
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
 
-____________________________________________________________________________________
 Test basic:
 	>>> say_my_name("hello", "there")
 	My name is hello there
